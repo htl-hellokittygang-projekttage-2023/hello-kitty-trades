@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trading Bot</title>
+        <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAA/v3+AAUEEwD3/ekABwYIAAAALwAXCF0ACgE7AP39/QAAxvcAJyo5AAAAUADt7e0ABAQEAPr/+AD///8AFhYWAAAAIAD+/voAU1NTAP/8/gDbm/IA+f/+APj4+AD7+P8AAAIAAJYkvwD6+voA//v/AAEBHAD8/PwAExMTAAAAVAAODw0AAwMDAP3+/gD+/v4AODU7APr7/QDY0OAA7u7uAAAACAD9/v0A/v79AOfn5wCLiI8AZgYJAPn5+QAAADAA8fXsAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCQkHggtJSUlJS0kJCQkDyQkDy0ALQ8PDw8tAC0kJCQkCC0AJA8kCCQkJBcALQgkJAAADyQkDw8PDyQkDwAAJCQMACQoGw8JCQ8kJA8ADyQAAAAkLg8PDw8PLg8XAAAAJAAPHi4kIwEqAS4kLCQAHgAAAB4kJCQkCCQkJA8AAAAkAA8eJCQkJAgkAQgrDSQkJC0AHiQkJCQcFBYRMCckJCQkHyQkJCQIJjEHBhUKJCQkJAAkJCQOAhUdFRoaCyQkJCQQCAgPLRoVIBUFMi0kJCQkAAATLQApFRoEAw8AJCQkJB4PDyQrGBoaLSIAACQkJCQkHiQkARIZISQeLyQkJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <a id="name">Hello Kitty Trading Bot</a>
+            <a id="status">status</a>
+        </header>
+        <main>
+            <div class="view">
+                <div class="head">
+                </div>
+                <div class="chart">
+                    <div class="wrap">
+                        <div class="lines">
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                            <hr>
+                        </div>
+                        <div class="sticks" id="sticks">
+                            
+                        </div>
+                        <div class="indicators" id="indicators">
+                        </div>
+                        <div class="prices" id="prices">
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="times">
+                        <p>-34</p>
+                        <p>-33</p>
+                        <p>-32</p>
+                        <p>-31</p>
+                        <p>-30</p>
+                        <p>-29</p>
+                        <p>-28</p>
+                        <p>-27</p>
+                        <p>-26</p>
+                        <p>-25</p>
+                        <p>-24</p>
+                        <p>-23</p>
+                        <p>-22</p>
+                        <p>-21</p>
+                        <p>-20</p>
+                        <p>-19</p>
+                        <p>-18</p>
+                        <p>-17</p>
+                        <p>-16</p>
+                        <p>-15</p>
+                        <p>-14</p>
+                        <p>-13</p>
+                        <p>-12</p>
+                        <p>-11</p>
+                        <p>-10</p>
+                        <p>-9</p>
+                        <p>-8</p>
+                        <p>-7</p>
+                        <p>-6</p>
+                        <p>-5</p>
+                        <p>-4</p>
+                        <p>-3</p>
+                        <p>-2</p>
+                        <p>-1</p>
+                        <p>0</p>
+                        <p>minutes<br>from now</p>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="leg-ind-buy">
+                        <div></div>
+                        <p>BUY</p>
+                    </div>
+                    <div class="leg-ind-sell">
+                        <div></div>
+                        <p>SELL</p>
+                    </div>
+                </div>
+            </div>
+            <aside>
+                <h1>Stats</h1>
+                <p>Grundkapital:<span id="gcapital">€ 0</span></p>
+                <p>Anlagekapital:<span id="acapital">€ 0</span></p>
+                <p>Margin:<span id="margin">€ 0</span></p>
+                <p>GUV:<span id="guv">€ 0</span></p>
+            </aside>
+        </main>
+        <script src="script.js"></script>
+    </body>
+    <footer>
+        <a>made with &lt;3 by the </a>
+        <a href="./aboutUs.html">Hello Kitty Gang</a>
+    </footer>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="De-de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link
+        href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAA/v3+AAUEEwD3/ekABwYIAAAALwAXCF0ACgE7AP39/QAAxvcAJyo5AAAAUADt7e0ABAQEAPr/+AD///8AFhYWAAAAIAD+/voAU1NTAP/8/gDbm/IA+f/+APj4+AD7+P8AAAIAAJYkvwD6+voA//v/AAEBHAD8/PwAExMTAAAAVAAODw0AAwMDAP3+/gD+/v4AODU7APr7/QDY0OAA7u7uAAAACAD9/v0A/v79AOfn5wCLiI8AZgYJAPn5+QAAADAA8fXsAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCQkHggtJSUlJS0kJCQkDyQkDy0ALQ8PDw8tAC0kJCQkCC0AJA8kCCQkJBcALQgkJAAADyQkDw8PDyQkDwAAJCQMACQoGw8JCQ8kJA8ADyQAAAAkLg8PDw8PLg8XAAAAJAAPHi4kIwEqAS4kLCQAHgAAAB4kJCQkCCQkJA8AAAAkAA8eJCQkJAgkAQgrDSQkJC0AHiQkJCQcFBYRMCckJCQkHyQkJCQIJjEHBhUKJCQkJAAkJCQOAhUdFRoaCyQkJCQQCAgPLRoVIBUFMi0kJCQkAAATLQApFRoEAw8AJCQkJB4PDyQrGBoaLSIAACQkJCQkHiQkARIZISQeLyQkJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+        rel="icon" type="image/x-icon">
+    <style>
+        :root {
+            --back: #252B48;
+            --front: #445069;
+            --text: rgb(135, 151, 182);
+            --modal-bg: rgb(47, 47, 47);
+            --font-family: 'Roboto', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: var(--text);
+            opacity: 97%;
+        }
+
+        body {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+            background-color: var(--back);
+            background-image: url("https://www.pngmart.com/files/16/Pink-Kitty-PNG-Photos.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: var(--font-family);
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            margin-top: 2em;
+            opacity: 100% !important;
+        }
+
+        p {
+            font-size: 25px;
+        }
+
+        ol {
+            margin-top: 1em;
+            font-size: 20px;
+            list-style: none;
+        }
+
+        a {
+            font-size: 25px;
+            margin: 0 !important;
+        }
+
+        strong {
+            margin: 0 !important;
+        }
+
+        #main {
+            background-color: var(--front);
+            height: 95%;
+            width: 95%;
+            border-radius: 12px;
+            padding: 0.5em;
+            text-align: center;
+            overflow: scroll;
+        }
+
+        #main * {
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <a href="../website/index.html">&lt;&lt; back</a>
+        <h1>Einleitung</h1>
+        <p>
+            Dieses Projekt ist das Resultat der 3-tägigen Projektwoche der Abteilung Informatik und Management der <a
+                href="https://htl-villach.at">HTL-Villach</a>. </br>
+            Wir arbeiteten vom 19. Dezember bis zum 21. Dezember. <br>
+            Angetrieben von Erfindergeist und einigen Litern Monster Energy wollten wir nichts weniger als Perfektion
+            erreichen.
+        </p>
+        <h1>Hello Kitty Gang 😎</h1>
+        <p>
+            Wer sind wir?<br />
+            Sandro<br>
+            Sascha<br>
+            Linus<br>
+            Simon<br>
+            und Max<br>
+
+            <br>
+
+            Sandro, Sascha und Linus sind <strong>sehr</strong> große <a href="https://de.wikipedia.org/wiki/Hello_Kitty">Hello Kitty</a> fans!<br>
+            Dadurch auch der Name 🙈.<br>
+        </p>
+
+        <h1>Das Projekt</h1>
+        <p>
+            Wie der Name schon verrät, handelt es sich um einen Trading Bot.<br>
+            Er kauft und verkauft Aktien basierend auf deren Verhalten,
+            um den höchstmöglichen Gewinn zu erzielen.<br>
+            Um es nicht unnötig kompliziert zu machen, haben wir uns für eine einfache Strategie entschieden: <a href="https://de.wikipedia.org/wiki/Scalping">Scalping.</a><br>
+            Als <a href="https://de.wikipedia.org/wiki/Broker">Broker</a> verwenden wir <a href="https://capital.com/">Capital.com</a><br>
+            Für das Frontend verwenden wir simples HTML und Vanilla JS.<br>
+            Das Backend besteht wiederum aus Python, da uns diese Sprache am besten für das Anwenden von Algorithmen
+            vorgekommen ist. </br>
+
+
+
+        </p>
+        <h1>Die Entwicklungsverteilung</h1>
+        <p>
+            Wer hat sich um was gekümmert: <br>
+        <ol> Frontend:
+            <li>Sascha (Profi)</li>
+            <li>Simon (Profi)</li>
+            <li>Linus (Profi)</li>
+        </ol>
+        <ol>Backend:
+            <li>Max (Max)</li>
+        </ol>
+        <ol>Marketing & Trading Spezialist:
+            <li>Sandro (Finanzamtler)</li>
+        </ol>
+        </p>
+
+        <br>
+        <br>
+
+        <h1>Schlusswort</h1>
+        <p>
+            Es war keine leichte Aufgabe, diese Herausforderung in nur <strong>3</strong> Tagen zu bewältigen.
+            Wir haben uns jedoch immer angestrengt, jede Aufgabe als machbar angesehen und bis zum Ende gekämpft.<br>
+            Unser Ziel war es, uns stetig zu verbessern - besser als andere und besser als wir es zuvor waren.
+            <br>
+            <br>
+            <b>"Wer aufhört besser zu werden, hat aufgehört gut zu sein." ~Marie von Ebner-Eschenbach</b>
+            <br>
+            <br>
+            Shoutout an die tauben - vögel - getier - gang brrr brrr 🗣🗣🗣<br> ~ MoneyBoy (Jedem das seine, aber mir das meiste!)
+        </p>
+</body>
+
+</html>

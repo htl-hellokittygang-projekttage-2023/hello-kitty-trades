@@ -1,0 +1,470 @@
+:root {
+    --back: #252B48;
+    --front: #445069;
+    --text: #8797b6;
+    --btn-bg: rgb(44, 49, 76);
+    --modal-btn-bg: #21262e;
+    --modal-bg: rgb(47, 47, 47);
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text);
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--back);
+    background-image: url("https://www.pngmart.com/files/16/Pink-Kitty-PNG-Photos.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: var(--font-family);
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    width: 98vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--front);
+    border-radius: 12px;
+    margin: 1vh 1vw;
+    opacity: 97%;
+}
+
+header a {
+    margin: 0 1.5vw;
+    font-size: 3vh;
+    height: 3vh;
+}
+
+header a:first-child {
+    margin-right: auto;
+}
+
+header.connecting {
+    background: linear-gradient(to right, var(--front) 30%, rgb(255, 255, 0));
+}
+
+header.connected {
+    background: linear-gradient(to right, var(--front) 30%, #2b8a3e);
+}
+
+header.disconnected {
+    background: linear-gradient(to right, var(--front) 30%, #8a2b2b);
+}
+
+header.error {
+    background: linear-gradient(to right, var(--front) 30%, #590404);
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 88vh;
+    flex-direction: row;
+    opacity: 97%;
+}
+
+.view {
+    display: flex;
+    width: 75vw;
+    height: 86vh;
+    margin: 1vh 0.5vw 1vh 1vw;
+    flex-direction: column;
+    background-color: var(--front);
+    border-radius: 12px;
+}
+
+.view .head {
+    display: flex;
+    width: 75vw;
+    height: 5vh;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.view .head .stockbutton {
+    height: 5vh;
+    font-size: 3vh;
+    border: none;
+    background-color: transparent;
+    padding: 0vh 1vw;
+    cursor: pointer;
+}
+
+.view .head .stockbutton.stock-active,
+.view .head .stockbutton:hover {
+    background-color: var(--btn-bg);
+    border-bottom: 3px solid;
+}
+
+.view .head .stockbutton:first-child {
+    border-radius: 12px 0 0 0;
+}
+
+.view .head .stockbutton:last-child {
+    border-radius: 0 12px 0 0;
+}
+
+.view .chart {
+    display: flex;
+    width: 75vw;
+    height: 75vh;
+    flex-direction: column;
+    background-color: #171a2b;
+}
+
+.view .chart .wrap {
+    display: flex;
+    width: 75vw;
+    height: 75vh;
+    flex-direction: row;
+}
+
+.view .chart .wrap .lines {
+    display: flex;
+    position: absolute;
+    width: 70vw;
+    height: 70vh;
+    flex-direction: column;
+    z-index: 0;
+}
+
+.view .chart .wrap .lines hr {
+    height: 1px;
+    margin: calc(0.875vh - 1px) 0;
+    border-color: #373949;
+}
+
+.view .chart .wrap .sticks {
+    display: flex;
+    width: 70vw;
+    height: 70vh;
+    flex-direction: row;
+    z-index: 3;
+}
+
+.view .chart .wrap .sticks .stick:hover > .popup {
+    display: flex;
+}
+
+.view .chart .wrap .sticks .stick .body {
+    width: 1.5vw;
+    min-height: 1px;
+    height: 5vh;
+    margin: 0 0.25vw;
+}
+
+.view .chart .wrap .sticks .stick .wickTop {
+    position: relative;
+    width: 5px;
+    height: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.view .chart .wrap .sticks .stick .wickBottom {
+    position: relative;
+    width: 5px;
+    height: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.view .chart .wrap .sticks .stick.st-green .wickTop,
+.view .chart .wrap .sticks .stick.st-green .body,
+.view .chart .wrap .sticks .stick.st-green .wickBottom {
+    background-color: green;
+}
+
+.view .chart .wrap .sticks .stick.st-red .wickTop,
+.view .chart .wrap .sticks .stick.st-red .body,
+.view .chart .wrap .sticks .stick.st-red .wickBottom {
+    background-color: red;
+}
+
+.view .chart .wrap .sticks .stick .popup {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    padding: 1vh 1vw;
+    background-color: var(--front);
+    border-radius: 12px;
+    z-index: 2;
+    margin-left: 2vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.view .chart .wrap .indicators {
+    display: flex;
+    position: absolute;
+    width: 70vw;
+    height: 70vh;
+    flex-direction: row;
+    z-index: 2;
+}
+
+.view .chart .wrap .indicators .ind-buy {
+    position: absolute;
+    width: 1.5vw;
+    height: 3px;
+    background-color: blue;
+}
+
+.view .chart .wrap .indicators .ind-sell {
+    position: absolute;
+    width: 1.5vw;
+    height: 3px;
+    background-color: yellow;
+}
+
+/*
+<3
+hellokitty4life
+*/
+
+.view .chart .wrap .prices {
+    display: flex;
+    width: 5vw;
+    height: 70vh;
+    flex-direction: column;
+}
+
+.view .chart .wrap .prices p {
+    height: 1.5vh;
+    font-size: 1.5vh;
+    margin: 0.125vh 0;
+}
+
+.view .chart .times {
+    display: flex;
+    width: 75vw;
+    height: 5vh;
+    flex-direction: row;
+    align-items: center;
+}
+
+.view .chart .times p {
+    width: 1vw;
+    margin: 0 0.5vw;
+}
+
+.view .chart .times p:last-child {
+    width: 5vw;
+    font-size: 1.5vh;
+}
+
+.view .foot {
+    display: flex;
+    height: 5vh;
+    flex-direction: row;
+    align-items: center;
+}
+
+.view .foot .leg-ind-buy, .view .foot .leg-ind-sell {
+    display: flex;
+    flex-direction: row;
+    margin: 1vh 1vw 0 1vw;
+}
+
+.view .foot .leg-ind-buy div {
+    background-color: blue;
+    width: 3vw;
+    height: 3vh;
+}
+
+.view .foot .leg-ind-sell div {
+    background-color: yellow;
+    width: 3vw;
+    height: 3vh;
+}
+
+.view .foot .leg-ind-buy p, .view .foot .leg-ind-sell p {
+    font-size: 3vh;
+    margin-left: 1vw;
+}
+
+aside {
+    display: flex;
+    width: 22vw;
+    margin: 1vh 1vw 1vh 0.5vw;
+    flex-direction: column;
+    background-color: var(--front);
+    border-radius: 12px;
+    padding: 1.5vh 1vw;
+    opacity: 97%;
+}
+
+aside h1 {
+    font-size: 4vh;
+    align-self: center;
+}
+
+aside p {
+    display: inline-flex;
+    font-size: 3vh;
+    justify-content: space-between;
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1d1d1db4;
+}
+  
+.modal {
+    display: flex;
+    flex-direction: column;
+    background: var(--modal-bg);
+    width: 50%;
+    border-radius: 12px;
+    margin: auto;
+    padding: 2vh 2vw;
+    margin-top: 20vh;
+    color: #FFF;
+}
+  
+.btn {
+    width: 20vw;
+    height: 5vh;
+    cursor: pointer;
+    border: none;
+    margin-top: auto;
+    align-self: center;
+    padding: 1vh 1vw;
+    border-radius: 12px;
+    font-size: 2vh;
+    background-color: var(--modal-btn-bg);
+    outline: none;
+    color: white;
+}
+
+.btn-wrap {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.btn-save {
+    width: 10vw;
+    height: 5vh;
+    cursor: pointer;
+    border: none;
+    font-size: 2vh;
+    margin: 1vh 1vw 1vh 0;
+    padding: 1vh 1vw;
+    border-radius: 12px;
+    background-color: green;
+    outline: none;
+    color: white;
+}
+
+.btn-cancel{
+    width: 10vw;
+    height: 5vh;
+    cursor: pointer;
+    border: none;
+    font-size: 2vh;
+    margin: 1vh 1vw;
+    padding: 1vh 1vw;
+    border-radius: 12px;
+    background-color: red;
+    outline: none;
+    color: white;
+}
+
+  .settingsDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 1vh 0;
+    padding: 10px;
+
+    border-bottom: 5px solid var(--front);
+  }
+
+  .toggleText {
+    display: inline-block;
+    font-size: 20px;
+  }
+
+  .toggleBtn{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: var(--front);
+  }
+
+  .setText{
+    display: inline-block;
+    font-size: 20px;
+  }
+
+  .setInp {
+    outline: none;
+    background-color: var(--modal-btn-bg);
+    border: none;
+    border-radius: 10px;
+    /* height: 2em; */
+    padding: 0.5em;
+    appearance: none;
+  }
+
+    .setInp::-webkit-outer-spin-button,
+    .setInp:-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.setInp[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--front);
+    border-radius: 12px;
+    margin: 1vh 1vw;
+    width: 98vw;
+    padding: 0.25em;
+    opacity: 97%;
+}
+
+
+
+/*        */
+/*   <3   */
+/*        */
+
+/* #name{
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+} */

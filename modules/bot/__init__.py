@@ -1,0 +1,1 @@
+from .TradingBot import ScalpingStrategy
